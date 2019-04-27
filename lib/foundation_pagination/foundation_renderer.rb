@@ -9,7 +9,7 @@ module FoundationPagination
         item.is_a?(Integer) ? page_number(item) : send(item)
       end.join(@options[:link_separator])
 
-      tag("ul", list_items, :class => "pagination #{@options[:class]}")
+      tag("ul", list_items, :class => "pagination text-center #{@options[:class]}")
     end
 
     def container_attributes
